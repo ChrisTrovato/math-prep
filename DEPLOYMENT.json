@@ -1,0 +1,76 @@
+{
+  "verifiedAtUtc": "2026-10-31T07:24:33.668Z",
+  "status": "READY",
+  "target": "production",
+  "url": "https://www.christrovato.com/math_prep",
+  "repository": "https://github.com/ChrisTrovato/math-prep",
+  "codeCommit": "1f33d0a",
+  "deploymentId": "dpl_7AtRJdjMYd7hDt7nzacY3RpsJxKL",
+  "deploymentUrl": "https://christrovato-bfpwsor1l-chris-projects-af5fd5e9.vercel.app",
+  "preservedParentFiles": 95,
+  "checks": [
+    {
+      "path": "/math_prep",
+      "status": 200,
+      "finalUrl": "https://www.christrovato.com/math_prep",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 2793
+    },
+    {
+      "path": "/math_prep/app.js",
+      "status": 200,
+      "finalUrl": "https://www.christrovato.com/math_prep/app.js",
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 35394
+    },
+    {
+      "path": "/math_prep/data.js",
+      "status": 200,
+      "finalUrl": "https://www.christrovato.com/math_prep/data.js",
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 28441
+    },
+    {
+      "path": "/math_prep/problems.js",
+      "status": 200,
+      "finalUrl": "https://www.christrovato.com/math_prep/problems.js",
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 10912
+    },
+    {
+      "path": "/math_prep/styles.css",
+      "status": 200,
+      "finalUrl": "https://www.christrovato.com/math_prep/styles.css",
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 19961
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "finalUrl": "https://www.christrovato.com/",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 103760
+    },
+    {
+      "path": "/aero_specialization_decision",
+      "status": 200,
+      "finalUrl": "https://www.christrovato.com/aero_specialization_decision",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 2244
+    },
+    {
+      "path": "/godel",
+      "status": 200,
+      "finalUrl": "https://www.christrovato.com/godel",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 66053
+    },
+    {
+      "path": "/potential_junk_removal_opportunity",
+      "status": 200,
+      "finalUrl": "https://www.christrovato.com/potential_junk_removal_opportunity",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 71002
+    }
+  ]
+}
