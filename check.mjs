@@ -7,12 +7,17 @@ import { concepts, missions, mistakes } from './dist/math_prep/concepts-data.js'
 import { historyEntries, historySources } from './dist/math_prep/history-data.js';
 import { problems } from './dist/math_prep/problems.js';
 import { diagnosticDomains, diagnosticQuestions } from './dist/math_prep/diagnostic.js';
+import {lessons} from './dist/math_prep/curriculum-data.js';
+import {studyGuides,engineeringHabits,projects,fieldManualSources} from './dist/math_prep/field-manual-data.js';
+import {skills} from './dist/math_prep/drill-engine.js';
+import {capabilityPaths,collegeLinks} from './dist/math_prep/platform-data.js';
 
 // Resolve against this script so the check also works outside the project cwd.
 const site = new URL('./dist/math_prep/', import.meta.url);
 const requiredFiles = [
   'index.html', 'app.js', 'data.js', 'problems.js', 'styles.css', 'atlas.css',
-  'concepts-data.js', 'history-data.js', 'expansion.js', 'labs.js', 'diagnostic.js'
+  'concepts-data.js', 'history-data.js', 'expansion.js', 'labs.js', 'diagnostic.js',
+  'platform.js','platform.css','platform-data.js','workspace.js','curriculum-data.js','field-manual-data.js','drill-engine.js','drills.js'
 ];
 const content = new Map();
 for (const name of requiredFiles) {
@@ -32,7 +37,8 @@ for (const name of requiredFiles) {
 
 const html = content.get('index.html');
 const app = content.get('app.js');
-for (const asset of ['/math_prep/app.js', '/math_prep/styles.css', '/math_prep/atlas.css']) {
+assert.ok(fs.statSync(new URL('media/cupola-earth.webp',site)).size>10000,'Missing NASA hero image');
+for (const asset of ['/math_prep/app.js', '/math_prep/styles.css', '/math_prep/atlas.css','/math_prep/platform.css']) {
   assert.ok(html.includes(asset), `HTML does not load ${asset}`);
 }
 for (const [, pathname] of html.matchAll(/(?:src|href)=["'](\/math_prep\/[^"'?#]+)(?:[?#][^"']*)?["']/g)) {
@@ -90,7 +96,9 @@ function checkUrls(value, location = 'content') {
     checkedUrls++;
   }
 }
-checkUrls({ resources, videos, sources, concepts, missions, historyEntries, historySources });
+checkUrls({ resources, videos, sources, concepts, missions, historyEntries, historySources,lessons,studyGuides,engineeringHabits,projects,fieldManualSources,capabilityPaths,collegeLinks });
+for(const [name,rows]of Object.entries({lessons,studyGuides,engineeringHabits,projects,skills}))validIds(name,rows);
+assert.equal(lessons.length,48);assert.equal(studyGuides.length,24);assert.equal(engineeringHabits.length,12);assert.equal(projects.length,12);assert.equal(skills.length,36);
 for (const [name, rows] of Object.entries({ concepts, missions })) {
   for (const row of rows) {
     assert.ok(row.source?.title?.trim() && row.source?.url, `${name}/${row.id} is missing a labeled source`);
@@ -102,11 +110,11 @@ for (const entry of historyEntries) {
 }
 
 // Navigation is a public contract: every advertised section needs a label and renderer.
-const expectedRoutes = ['home', 'path', 'diagnostic', 'concepts', 'history', 'glossary', 'method', 'missions', 'labs', 'practice', 'mistakes', 'library', 'notebook', 'horizon', 'sources'];
+const expectedRoutes = ['home', 'path', 'diagnostic', 'concepts', 'history', 'glossary', 'method', 'missions', 'labs', 'practice', 'mistakes', 'library', 'notebook', 'horizon', 'sources','curriculum','drills','review','study','purpose','habits','projects','map','progress'];
 const nav = html.match(/<nav\b[^>]*\bid=["']primary-nav["'][^>]*>([\s\S]*?)<\/nav>/)?.[1];
 assert.ok(nav, 'Primary navigation not found');
 const navRoutes = [...nav.matchAll(/href=["']#([a-z]+)["']/g)].map(match => match[1]);
-assert.equal(navRoutes.length, 15, 'Primary navigation must expose all 15 sections');
+assert.equal(navRoutes.length, 24, 'Primary navigation must expose all 24 sections');
 assert.equal(new Set(navRoutes).size, navRoutes.length, 'Primary navigation contains a duplicate route');
 assert.deepEqual(new Set(navRoutes), new Set(expectedRoutes), 'Unexpected or missing primary route');
 const routeLabels = app.match(/const\s+routeLabels\s*=\s*\{([^\n]+)\};/)?.[1];
@@ -114,7 +122,7 @@ const renderers = app.match(/const\s+renderers\s*=\s*\{([^\n]+)\};/)?.[1];
 assert.ok(routeLabels && renderers, 'Route declarations were not found for navigation validation');
 const labelKeys = [...routeLabels.matchAll(/(?:^|,)\s*([a-z]+)\s*:/g)].map(match => match[1]);
 const rendererKeys = [...renderers.matchAll(/(?:^|,)\s*([a-z]+)\s*(?=:|,|$)/g)].map(match => match[1]);
-assert.deepEqual(new Set(labelKeys), new Set(expectedRoutes), 'Navigation labels and supported routes differ');
-assert.deepEqual(new Set(rendererKeys), new Set(expectedRoutes), 'Navigation routes and renderers differ');
+assert.deepEqual(new Set(labelKeys), new Set([...expectedRoutes,'lesson','search']), 'Navigation labels and supported routes differ');
+assert.deepEqual(new Set(rendererKeys), new Set([...expectedRoutes,'lesson','search']), 'Navigation routes and renderers differ');
 
 console.log(`Integrity checks passed: ${requiredFiles.length} assets, ${expectedRoutes.length} routes, ${concepts.length} concepts, ${missions.length} missions, ${historyEntries.length} history entries, ${checkedUrls} source/resource URLs.`);

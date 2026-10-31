@@ -36,3 +36,17 @@ Validation at this checkpoint: 23 automated tests pass. Desktop and mobile brows
 - Preserved 96 unrelated parent files; existing homepage, aerospace guide, Godel page, and opportunity page return HTTP 200.
 - Live release and source commit are recorded in DEPLOYMENT.json.
 
+
+
+## 2026-10-31 — v3 Engineering Learning Platform
+
+Expanded the atlas into 24 primary sections with a cinematic NASA Cupola homepage, a guided reader, fresh practice, and a portable workspace.
+
+- Added 48 lessons, 52 worked examples, 48 quizzes, and 70 official OpenStax references; more than 17,000 words of original curriculum.
+- Added 24 study guides, 12 engineering habits, 12 projects, and six maps connecting foundations to aerospace capabilities; more than 14,000 words of original field-manual material.
+- Added 36 parameterized practice skills, saved sessions, separate independent/assisted first-attempt records, and a transparent review queue.
+- Added search across 202 entries, adjustable reading text, print controls, read marks, a progress dashboard, and versioned backup/import.
+- Preserved the existing path, diagnostic, history, interactive labs, resources, and browser storage key.
+- Independently audited quiz answers and worked examples, corrected trigonometry wording, and verified source links.
+
+Validation: 65 automated tests pass, including independent calculations for 7,200 generated exercises, quiz persistence, backup restoration, duplicate-counter prevention, record-limit rejection, and asynchronous import races. All 24 sections render at desktop and 375-pixel content width without horizontal overflow. Browser checks cover global search, lesson feedback/read marks after reload, fresh practice grading, selector/deep-link resume, and backup preview/merge into the notebook. Long-form reading and mobile homepage layouts were visually inspected. Final release identifiers and verified asset hashes are recorded separately in DEPLOYMENT.json.
