@@ -26,3 +26,13 @@ Expanded the guide into 15 sections with a new visual presentation and deeper ex
 - Audited content and source links, including historical caveats, engineering assumptions, and worked arithmetic.
 
 Validation at this checkpoint: 23 automated tests pass. Desktop and mobile browser QA is underway; final production deployment and release verification are not yet recorded for this expansion.
+
+### V2 release verification
+
+- Production build passed; all 11 live assets match tested source hashes.
+- All 15 sections checked at phone width without horizontal overflow.
+- Diagnostic answer/save/reload/results, notebook persistence and safe text, glossary search, concept-to-note links, practice grading, and five lab panels checked in Chrome.
+- 23 automated tests and content integrity checks pass.
+- Preserved 96 unrelated parent files; existing homepage, aerospace guide, Godel page, and opportunity page return HTTP 200.
+- Live release and source commit are recorded in DEPLOYMENT.json.
+

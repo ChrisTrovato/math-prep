@@ -1,75 +1,104 @@
 {
-  "verifiedAtUtc": "2026-10-31T07:24:33.668Z",
+  "verifiedAtUtc": "2026-10-31T08:10:28.495Z",
+  "version": 2,
   "status": "READY",
   "target": "production",
   "url": "https://www.christrovato.com/math_prep",
   "repository": "https://github.com/ChrisTrovato/math-prep",
-  "codeCommit": "1f33d0a",
-  "deploymentId": "dpl_7AtRJdjMYd7hDt7nzacY3RpsJxKL",
-  "deploymentUrl": "https://christrovato-bfpwsor1l-chris-projects-af5fd5e9.vercel.app",
-  "preservedParentFiles": 95,
+  "codeCommit": "32bda6e168bc3211ddc4619252f8720bea303841",
+  "deploymentId": "dpl_JDxZFzSDCwBytTCp9yV4i1dNhaLT",
+  "deploymentUrl": "https://christrovato-c5u35htdl-chris-projects-af5fd5e9.vercel.app",
+  "tests": 23,
+  "sections": 15,
   "checks": [
     {
       "path": "/math_prep",
       "status": 200,
       "finalUrl": "https://www.christrovato.com/math_prep",
-      "contentType": "text/html; charset=utf-8",
-      "bytes": 2793
+      "bytes": 3895
     },
     {
       "path": "/math_prep/app.js",
       "status": 200,
       "finalUrl": "https://www.christrovato.com/math_prep/app.js",
-      "contentType": "application/javascript; charset=utf-8",
-      "bytes": 35394
+      "bytes": 33602
+    },
+    {
+      "path": "/math_prep/atlas.css",
+      "status": 200,
+      "finalUrl": "https://www.christrovato.com/math_prep/atlas.css",
+      "bytes": 30351
+    },
+    {
+      "path": "/math_prep/concepts-data.js",
+      "status": 200,
+      "finalUrl": "https://www.christrovato.com/math_prep/concepts-data.js",
+      "bytes": 42323
     },
     {
       "path": "/math_prep/data.js",
       "status": 200,
       "finalUrl": "https://www.christrovato.com/math_prep/data.js",
-      "contentType": "application/javascript; charset=utf-8",
       "bytes": 28441
+    },
+    {
+      "path": "/math_prep/diagnostic.js",
+      "status": 200,
+      "finalUrl": "https://www.christrovato.com/math_prep/diagnostic.js",
+      "bytes": 29815
+    },
+    {
+      "path": "/math_prep/expansion.js",
+      "status": 200,
+      "finalUrl": "https://www.christrovato.com/math_prep/expansion.js",
+      "bytes": 26727
+    },
+    {
+      "path": "/math_prep/history-data.js",
+      "status": 200,
+      "finalUrl": "https://www.christrovato.com/math_prep/history-data.js",
+      "bytes": 27185
+    },
+    {
+      "path": "/math_prep/labs.js",
+      "status": 200,
+      "finalUrl": "https://www.christrovato.com/math_prep/labs.js",
+      "bytes": 17280
     },
     {
       "path": "/math_prep/problems.js",
       "status": 200,
       "finalUrl": "https://www.christrovato.com/math_prep/problems.js",
-      "contentType": "application/javascript; charset=utf-8",
       "bytes": 10912
     },
     {
       "path": "/math_prep/styles.css",
       "status": 200,
       "finalUrl": "https://www.christrovato.com/math_prep/styles.css",
-      "contentType": "text/css; charset=utf-8",
       "bytes": 19961
     },
     {
       "path": "/",
       "status": 200,
       "finalUrl": "https://www.christrovato.com/",
-      "contentType": "text/html; charset=utf-8",
       "bytes": 103760
     },
     {
       "path": "/aero_specialization_decision",
       "status": 200,
       "finalUrl": "https://www.christrovato.com/aero_specialization_decision",
-      "contentType": "text/html; charset=utf-8",
       "bytes": 2244
     },
     {
       "path": "/godel",
       "status": 200,
       "finalUrl": "https://www.christrovato.com/godel",
-      "contentType": "text/html; charset=utf-8",
       "bytes": 66053
     },
     {
       "path": "/potential_junk_removal_opportunity",
       "status": 200,
       "finalUrl": "https://www.christrovato.com/potential_junk_removal_opportunity",
-      "contentType": "text/html; charset=utf-8",
       "bytes": 71002
     }
   ]
