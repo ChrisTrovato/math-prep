@@ -50,3 +50,13 @@ Expanded the atlas into 24 primary sections with a cinematic NASA Cupola homepag
 - Independently audited quiz answers and worked examples, corrected trigonometry wording, and verified source links.
 
 Validation: 65 automated tests pass, including independent calculations for 7,200 generated exercises, quiz persistence, backup restoration, duplicate-counter prevention, record-limit rejection, and asynchronous import races. All 24 sections render at desktop and 375-pixel content width without horizontal overflow. Browser checks cover global search, lesson feedback/read marks after reload, fresh practice grading, selector/deep-link resume, and backup preview/merge into the notebook. Long-form reading and mobile homepage layouts were visually inspected. Final release identifiers and verified asset hashes are recorded separately in DEPLOYMENT.json.
+
+
+### V3 release verification
+
+- Production build passed and the custom domain points to the verified deployment.
+- All 20 deployed Math Prep assets, including the NASA image, match tested source hashes.
+- Public curriculum/search and the final homepage were checked in Chrome; the bare-domain redirect is valid.
+- Larger-text lesson navigation and project details fit the phone viewport after a layout correction.
+- Preserved 96 unrelated parent files and verified the homepage, aerospace guide, Godel page, and opportunity page return HTTP 200.
+- Synchronized the parent source copy and recorded deployment identifiers, counts, and live hashes in DEPLOYMENT.json.
