@@ -14,3 +14,15 @@ Built the arithmetic-to-precalculus guide for `christrovato.com/math_prep`.
 Validation: independent answer calculations, fraction parsing, rounding tolerance, negative-number handling, malformed-input rejection, and content/reference checks passed. Desktop and 390-pixel mobile layouts were visually reviewed in Chrome; correct-answer feedback, fractional input, resource search and bookmarks were exercised. The site remains a supplement to a complete course and does not provide official placement.
 
 Publication uses the existing christrovato Vercel project, preserving the parent site's other routes. Release identifiers are recorded in `DEPLOYMENT.json` once production verification completes.
+
+## 2026-10-31 — v2 Mathematics Field Atlas
+
+Expanded the guide into 15 sections with a new visual presentation and deeper explanations connecting foundations to engineering.
+
+- Added 16 sourced historical stories, 24 concept explanations, 8 worked aerospace/robotics missions, 10 mistake explanations, and a searchable 30-term glossary.
+- Added five interactive labs for energy, linear functions, scaling, vectors, and circular orbits, with explicit model assumptions.
+- Added a 12- or 24-question informal diagnostic that distinguishes wrong answers, skipped questions, and not-yet-learned topics, then recommends starting topics without claiming official placement.
+- Retained the six-stage path, 24 practice problems, and 22-resource library; added browser-local notes and expanded JSON export while preserving existing progress through the original storage key.
+- Audited content and source links, including historical caveats, engineering assumptions, and worked arithmetic.
+
+Validation at this checkpoint: 23 automated tests pass. Desktop and mobile browser QA is underway; final production deployment and release verification are not yet recorded for this expansion.
